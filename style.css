@@ -1,0 +1,71 @@
+:root {
+    --bg-color: #D8CFF4;
+    --card-bg: #F4D06F;
+    --text-color: #56494C;
+    --accent-color: #9DD9D2;
+    --hover-color: #392F5A;
+    --hover-text-color: #FFF8F0;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.card {
+    background-color: var(--card-bg);
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+a:hover {
+    color: var(--hover-color);
+}
+
+.btn-primary {
+    background-color: var(--bg-color);
+    border-color: var(--bg-color);
+    color: var(--text-color);
+    }
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--hover-color);
+    border-color: var(--hover-color);
+    color: var(--hover-text-color);
+}
+
+.btn-custom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 0.8em 1.5em;
+    color: var(--text-color);
+    background: linear-gradient(
+        0deg,
+        var(--accent-color) 0%,
+        #75bdb6 100%
+    );
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em rgba(157, 217, 210, 0.7);
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+    text-decoration: none;
+    transition: box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
+}
+
+.btn-custom:hover {
+    box-shadow: 0 0.5em 1.5em -0.5em rgba(57, 47, 90, 0.7);
+    background: var(--hover-color);
+    color: var(--hover-text-color);
+}
+
+.btn-custom:active {
+    box-shadow: 0 0.3em 1em -0.5em rgba(57, 47, 90, 0.7);
+}
