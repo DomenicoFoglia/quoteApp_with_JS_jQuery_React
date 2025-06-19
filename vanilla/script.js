@@ -2,19 +2,6 @@ const quoteText = document.getElementById("text");
 const quoteAuthor = document.getElementById("author");
 const newQuoteBtn = document.getElementById("new-quote");
 
-// function getQuote(){
-//     fetch("https://api.quotable.io/quotes/random")
-//     .then(response => response.json())
-//     .then(data => {
-//         quoteText.innerText = `${data.content}`;
-//         quoteAuthor.innerText = `${data.author}`;
-//     })
-//     .catch(error => {
-//         quoteText.innerText = `Errore nel caricamento della citazione`;
-//         quoteAuthor.innerText = ``;
-//     })
-// }
-
 async function getQuote(){
     quoteText.textContent = "Caricamento...";
     quoteAuthor.textContent = "";
