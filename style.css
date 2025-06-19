@@ -9,14 +9,29 @@
 }
 
 body {
+    background-image: url('/wave-haikei.svg');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
     background-color: var(--bg-color);
-    color: var(--text-color);
 }
+
 
 .card {
     background-color: var(--card-bg);
     box-shadow: 0 4px 6px var(--shadow-color);
 }
+
+.custom-card {
+    background-image: url('/blob-scene-haikei.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
 
 a:hover {
     color: var(--hover-color);
@@ -69,3 +84,6 @@ a:hover {
 .btn-custom:active {
     box-shadow: 0 0.3em 1em -0.5em rgba(57, 47, 90, 0.7);
 }
+
+
+
