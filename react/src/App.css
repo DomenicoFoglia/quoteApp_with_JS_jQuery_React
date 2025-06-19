@@ -1,42 +1,130 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+:root {
+    --bg-color: #D8CFF4;
+    --card-bg: #F4D06F;
+    --text-color: #56494C;
+    --accent-color: #9DD9D2;
+    --hover-color: #392F5A;
+    --hover-text-color: #FFF8F0;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+body {
+    background-image: url('/wave-haikei.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--bg-color);
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.app-title {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.app-description {
+  margin-bottom: 2rem;
+  text-align: center;
+  max-width: 600px;
+  padding: 0 1rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.quote-card {
+  width: 100%;
+  min-height: 21rem;
+  position: relative;
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  display: flex;
+  flex-direction: column;
+  background-image: url('/blob-scene-haikei.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+#quote-content {
+  max-height: 10rem;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  color: var(--text-color);
+}
+
+.quote-text {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  min-height: 3rem;
+  font-weight: 500;
+}
+
+.quote-author {
+  text-align: right;
+  font-style: italic;
+  color: var(--hover-color);
+}
+
+#quote-box {
+    height: 21rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    max-width: 30rem;
+    background-image: url('/blob-scene-haikei.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.error-text {
+  color: #d9534f;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.btn-primary {
+  background-color: var(--bg-color);
+  border-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--hover-color);
+  border-color: var(--hover-color);
+  color: var(--hover-text-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
-.card {
-  padding: 2em;
+.btn-quote {
+  max-width: 220px;
+  margin: 0 auto;
 }
 
-.read-the-docs {
-  color: #888;
+footer {
+  width: 100%;
+  background-color: var(--hover-text-color);
+  padding: 1rem 0;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  text-align: center;
 }
