@@ -86,8 +86,24 @@ a:hover {
     box-shadow: 0 0.3em 1em -0.5em rgba(57, 47, 90, 0.7);
 }
 
+.btn-info {
+    background-color: #1da1f2;
+    border-color: #1da1f2;
+}
+
+.btn-info:hover {
+    background-color: #0d95e8;
+    border-color: #0d95e8;
+}
+
+.btn {
+    min-width: 180px;
+    border-radius: 2rem;
+    padding: 0.6rem 1.2rem;
+}
+
 #quote-box {
-    height: 21rem;
+    height: auto;
     overflow: hidden;
     display: flex;
     flex-direction: column;

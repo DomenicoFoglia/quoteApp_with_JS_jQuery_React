@@ -30,9 +30,9 @@ html, body {
 .app-description {
   margin-bottom: 2rem;
   text-align: center;
-  max-width: 600px;
+  max-width: 90%;
   padding: 0 1rem;
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
   font-weight: 400;
   color: var(--text-color);
 }
@@ -73,7 +73,7 @@ html, body {
 }
 
 #quote-box {
-    height: 21rem;
+    height: auto;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -81,7 +81,7 @@ html, body {
     align-items: center;
     text-align: center;
     padding: 2rem;
-    width: 100%;
+    width: 90%;
     max-width: 30rem;
     background-image: url('/blob-scene-haikei.svg');
     background-size: cover;
@@ -92,9 +92,12 @@ html, body {
     overflow: hidden;
 }
 
+
+
 .error-text {
   color: #d9534f;
   text-align: center;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
 }
 
 .btn-primary {
@@ -116,10 +119,38 @@ html, body {
   cursor: not-allowed;
 }
 
-.btn-quote {
-  max-width: 220px;
-  margin: 0 auto;
+.btn-quote,
+.btn-secondary,
+.btn-info,
+.btn-primary {
+  min-width: 180px;
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 2rem;
+  transition: all 0.3s ease;
 }
+
+.btn-info {
+  background-color: #1da1f2;
+  border-color: #1da1f2;
+}
+
+.btn-info:hover {
+  background-color: #0d95e8;
+  border-color: #0d95e8;
+}
+
+.button-group {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .button-group .btn {
+    margin-bottom: 0 !important;
+  }
+}
+
+
 
 footer {
   width: 100%;
@@ -128,3 +159,4 @@ footer {
   box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
   text-align: center;
 }
+

@@ -13,11 +13,30 @@ async function getQuote(){
 
         quoteText.textContent = `${data.quote}`;
         quoteAuthor.textContent = `${data.author}`;
+
+        updateSocialLinks(data.quote, data.author);
+        
     }catch(err){
         quoteText.textContent = "Errore nel caricamento";
         quoteAuthor.textContent = "";
     }
 }
+
+function updateSocialLinks(quoteText, quoteAuthor) {
+    const encoded = encodeURIComponent(`"${quoteText}" - ${quoteAuthor}`);
+    document.getElementById('twitter-share').href = `https://twitter.com/intent/tweet?text=${encoded}`;
+    document.getElementById('facebook-share').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(location.href)}`;
+};
+
+document.getElementById('copy-quote').addEventListener('click', () => {
+    const quote = document.getElementById('text').textContent;
+    const author = document.getElementById('author').textContent;
+    const full = `${quote} ${author}`;
+    navigator.clipboard.writeText(full).then(() => {
+        const btn = document.getElementById('copy-quote');
+        btn.textContent = 'Copiato!';
+    });
+});
 
 newQuoteBtn.addEventListener('click', getQuote);
 getQuote();
